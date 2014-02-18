@@ -1,6 +1,18 @@
 require_relative 'WikiPage.rb'
 require 'rubygems'
 require 'graphviz'
+require 'optparse'
+
+#options = {}
+#OptionParser.new do |opts|
+#  opts.banner 'Usage graph.rb:  ruby graph.rb [options]'
+#  opts.on('-L', '--level NUM', 'Recursively maps NUM levels of transclusions. Default = 1.')
+#  opts.on('-w', '--wiki', 'URI for wiki api on any wiki. Default is Wikipedia.')
+#  opts.on('-p', '--page' 'Page title to start the map') do |page|
+#
+#  end
+#end.parse!
+
 
 LEVELS = 10
 
@@ -45,7 +57,7 @@ def make_tree(pagename)
   end
 end
 
-make_tree('ABC')
+make_tree('Font')
 
-$g.output(png: "test.png")
+$g.output(png: "font.png")
 #$g.output(dot: "nodes.dot")
